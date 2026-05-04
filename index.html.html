@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISEE – Integración de Sistemas de Seguridad e Infraestructura IP | Guatemala</title>
+<meta name="description" content="Integradores certificados Hikvision en Guatemala. Control de acceso, CCTV industrial, cableado estructurado Cat 6A y fibra óptica para empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #0D1F33;
+    --blue:   #1A4E8C;
+    --blue2:  #1A3A5C;
+    --orange: #E87820;
+    --orange2:#C96010;
+    --light:  #F4F6FA;
+    --mid:    #D8DDE8;
+    --text:   #0D1F33;
+    --muted:  #5A6880;
+    --white:  #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, .label {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.15;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13, 31, 51, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-logo span { color: var(--orange); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 0.5rem 1.4rem !important;
+    border-radius: 4px;
+    font-weight: 600 !important;
+  }
+
+  .nav-cta:hover { background: var(--orange2); color: var(--white) !important; }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--navy);
+    overflow: hidden;
+    padding-top: 68px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(26,78,140,0.35) 0%, transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 59px,
+        rgba(255,255,255,0.025) 59px,
+        rgba(255,255,255,0.025) 60px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 59px,
+        rgba(255,255,255,0.025) 59px,
+        rgba(255,255,255,0.025) 60px
+      );
+  }
+
+  .hero-accent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, transparent, var(--orange) 40%, var(--orange) 60%, transparent);
+  }
+
+  .hero-content {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(232,120,32,0.15);
+    border: 1px solid rgba(232,120,32,0.4);
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  #hero h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--white);
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+  }
+
+  #hero h1 span { color: var(--orange); }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--orange2); }
+
+  .btn-outline {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.25);
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-outline:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hero-stat-num {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.2rem;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 6rem 2rem; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 580px;
+    line-height: 1.7;
+  }
+
+  /* ─── SERVICIOS ─── */
+  #servicios { background: var(--light); }
+
+  .services-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .services-intro { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5px;
+    background: var(--mid);
+    border: 1.5px solid var(--mid);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 2rem;
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .service-card:hover { background: #EAF1F8; }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(26,78,140,0.08);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-icon svg { width: 24px; height: 24px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .service-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: rgba(26,78,140,0.08);
+    color: var(--blue);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── POR QUÉ RISEE ─── */
+  #diferenciadores { background: var(--white); }
+
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .diff-grid { grid-template-columns: 1fr; }
+  }
+
+  .diff-card {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 1.75rem;
+    border: 1px solid var(--mid);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .diff-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 20px rgba(26,78,140,0.08);
+  }
+
+  .diff-num {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--mid);
+    line-height: 1;
+    min-width: 48px;
+    transition: color 0.2s;
+  }
+
+  .diff-card:hover .diff-num { color: var(--orange); }
+
+  .diff-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .diff-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ─── PROYECTOS ─── */
+  #proyectos { background: var(--navy); }
+
+  #proyectos .section-label { color: var(--orange); }
+  #proyectos .section-title { color: var(--white); }
+  #proyectos .section-sub { color: rgba(255,255,255,0.5); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  .project-card {
+    background: rgba(13,31,51,0.8);
+    padding: 2rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .project-card:hover { background: rgba(26,78,140,0.2); }
+
+  .project-type {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .project-meta-item {
+    font-size: 0.8rem;
+  }
+
+  .project-meta-label {
+    color: rgba(255,255,255,0.35);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+
+  .project-meta-val {
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* ─── CLIENTES ─── */
+  #clientes { background: var(--light); }
+
+  .clients-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--mid);
+    border: 1px solid var(--mid);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  .client-box {
+    flex: 1 1 180px;
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .client-name {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .client-sector {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* ─── CONTACTO ─── */
+  #contacto { background: var(--white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  .contact-info { }
+
+  .contact-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(26,78,140,0.08);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-item-icon svg { width: 18px; height: 18px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .contact-item-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .contact-item-val {
+    font-size: 0.95rem;
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  .contact-form { }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--light);
+    border: 1px solid var(--mid);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-family: 'Barlow', sans-serif;
+    color: var(--navy);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue);
+    background: var(--white);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-submit {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 0.95rem 2.5rem;
+    border-radius: 4px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+
+  .form-submit:hover { background: var(--navy); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 0.88rem;
+  }
+
+  footer strong { color: rgba(255,255,255,0.85); }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .footer-logo span { color: var(--orange); }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--orange); }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ─── ANIM ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .fade-up:nth-child(2) { animation-delay: 0.1s; }
+  .fade-up:nth-child(3) { animation-delay: 0.2s; }
+  .fade-up:nth-child(4) { animation-delay: 0.3s; }
+
+  .orange-bar {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: var(--orange);
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#" class="nav-logo">RIS<span>EE</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#diferenciadores">Nosotros</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#clientes">Clientes</a></li>
+    <li><a href="#contacto" class="nav-cta">Cotizar proyecto</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content container">
+    <div class="hero-tag fade-up">🛡 Integradores Certificados Hikvision · Guatemala</div>
+    <h1 class="fade-up">Infraestructura de seguridad<br><span>que protege industrias.</span></h1>
+    <p class="hero-sub fade-up">Diseño, instalación e integración de sistemas de videovigilancia, control de acceso y redes IP para empresas industriales, logísticas y comerciales en Guatemala y Centroamérica.</p>
+    <div class="hero-btns fade-up">
+      <a href="#contacto" class="btn-primary">Solicitar cotización</a>
+      <a href="#proyectos" class="btn-outline">Ver proyectos</a>
+    </div>
+    <div class="hero-stats fade-up">
+      <div>
+        <div class="hero-stat-num">+10</div>
+        <div class="hero-stat-label">Años de experiencia</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">Cat 6A</div>
+        <div class="hero-stat-label">Certificación de cableado</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">HikCentral</div>
+        <div class="hero-stat-label">Integrador certificado</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">GT · HN</div>
+        <div class="hero-stat-label">Guatemala y Honduras</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <div class="orange-bar"></div>
+        <p class="section-label">Servicios</p>
+        <h2 class="section-title">Soluciones técnicas para entornos exigentes</h2>
+      </div>
+      <p class="section-sub">Trabajamos con fabricantes de primer nivel para entregar sistemas integrados, no instalaciones aisladas. Cada proyecto incluye ingeniería, instalación, certificación y soporte.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Control de Acceso</h3>
+        <p>Implementación de HikCentral Professional con terminales biométricas, torniquetes, talanqueras vehiculares y módulos de alcoholemia. Integración con sistemas de RRHH y nómina.</p>
+        <div class="service-tags">
+          <span class="tag">HikCentral Pro</span>
+          <span class="tag">Biometría facial</span>
+          <span class="tag">ZKBioTime</span>
+          <span class="tag">Turnstiles</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3>Videovigilancia CCTV</h3>
+        <p>Diseño e instalación de sistemas IP con cámaras AcuSense, domo PTZ, 4K y anticorrosión para entornos marinos e industriales. Almacenamiento en NVR local o nube híbrida.</p>
+        <div class="service-tags">
+          <span class="tag">Hikvision AcuSense</span>
+          <span class="tag">PTZ</span>
+          <span class="tag">4K</span>
+          <span class="tag">Uniarch WiFi</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3>Infraestructura de Red</h3>
+        <p>Cableado estructurado Cat 6A certificado con Fluke DSX-8000, tendido de fibra óptica OS2/OM3, cuartos de telecomunicaciones, racks y patch panels según normas TIA-568.</p>
+        <div class="service-tags">
+          <span class="tag">Cat 6A</span>
+          <span class="tag">Fibra OS2 ADSS</span>
+          <span class="tag">Certificación Fluke</span>
+          <span class="tag">TIA-568</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 6l5 5 5-5M1 6h10M13 18l5-5 5 5M13 18h10"/><circle cx="12" cy="12" r="1"/></svg>
+        </div>
+        <h3>Conectividad Remota</h3>
+        <p>Instalación y configuración de enlaces Starlink para sitios rurales e industriales sin acceso a fibra. WiFi corporativo con Huawei, Ubiquiti y Mikrotik. Redes de largo alcance punto a punto.</p>
+        <div class="service-tags">
+          <span class="tag">Starlink Enterprise</span>
+          <span class="tag">Ubiquiti</span>
+          <span class="tag">Huawei AP</span>
+          <span class="tag">PtP</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm-1-11v6l5-3-5-3z"/></svg>
+        </div>
+        <h3>Alarmas AX PRO</h3>
+        <p>Paneles de intrusión Hikvision AX PRO inalámbricos con sensores PIR, contactos magnéticos, detectores de rotura de vidrio y sirenas. Monitoreo 24/7 con app móvil.</p>
+        <div class="service-tags">
+          <span class="tag">Hikvision AX PRO</span>
+          <span class="tag">Inalámbrico</span>
+          <span class="tag">Monitoreo 24/7</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 5.55 5.55l1.64-1.64a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        </div>
+        <h3>Estaciones de Pánico</h3>
+        <p>Instalación de terminales DS-KEP311X-ZJ con botón de pánico, intercomunicador, cámara PTZ y gestión en HikCentral. Para centros comerciales, concesionarias y espacios públicos.</p>
+        <div class="service-tags">
+          <span class="tag">DS-KEP311X-ZJ</span>
+          <span class="tag">PTZ integrado</span>
+          <span class="tag">HikCentral</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIFERENCIADORES ── -->
+<section id="diferenciadores">
+  <div class="container">
+    <div class="orange-bar"></div>
+    <p class="section-label">Por qué RISEE</p>
+    <h2 class="section-title">Más que instaladores.<br>Integradores de sistemas.</h2>
+    <p class="section-sub">La diferencia está en los detalles que otros ignoran: certificación de cableado, integración de plataformas y respaldo post-instalación.</p>
+
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-num">01</div>
+        <div>
+          <h3>Integración real entre plataformas</h3>
+          <p>Desarrollamos middleware propietario para conectar sistemas como ZKBioTime con HikCentral Professional — algo que la mayoría de integradores en Guatemala no puede ofrecer.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-num">02</div>
+        <div>
+          <h3>Certificación de cableado con Fluke DSX-8000</h3>
+          <p>Entregamos reportes de certificación Cat 6A por cada punto de red, garantizando rendimiento a 10 Gbps. No instalamos sin certificar.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-num">03</div>
+        <div>
+          <h3>Personal técnico con seguro de accidentes</h3>
+          <p>Nuestros técnicos cuentan con EPP completo y seguro contra accidentes laborales vigente. Podemos trabajar en altura, espacios confinados y entornos industriales con total respaldo legal.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-num">04</div>
+        <div>
+          <h3>Documentación técnica entregable</h3>
+          <p>Cada proyecto incluye planos de red, inventario de dispositivos, credenciales, informes de certificación y manuales de usuario. El cliente recibe el activo completo.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-num">05</div>
+        <div>
+          <h3>Proyectos en campo, sin excusas</h3>
+          <p>Hemos ejecutado proyectos en Escuintla, Baja Verapaz, Petén y Honduras. Contamos con capacidad logística para trabajos fuera de la ciudad capital.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-num">06</div>
+        <div>
+          <h3>Contratos de mantenimiento con SLA</h3>
+          <p>Ofrecemos contratos anuales de mantenimiento preventivo y correctivo con tiempos de respuesta definidos, para que su inversión siga funcionando año tras año.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROYECTOS ── -->
+<section id="proyectos">
+  <div class="container">
+    <div class="orange-bar"></div>
+    <p class="section-label">Proyectos ejecutados</p>
+    <h2 class="section-title" style="color:#fff;">Experiencia comprobada<br>en campo.</h2>
+    <p class="section-sub">Una muestra de proyectos reales que combinan complejidad técnica, trabajo en campo y entrega a tiempo.</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-type">Control de Acceso · Videovigilancia</div>
+        <h3>La Popular – Planta Industrial</h3>
+        <p>Integración ZKBioTime → HikCentral Professional para +4,000 empleados. Torniquetes biométricos, talanqueras vehiculares, cámaras en cabinas de grúas y WiFi industrial.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Alcance</span>
+            <span class="project-meta-val">4,069 empleados</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Plataforma</span>
+            <span class="project-meta-val">HikCentral Pro 3.1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Infraestructura IP · Fibra Óptica</div>
+        <h3>NAISA – Campus Sayaxché, Petén</h3>
+        <p>Diseño y propuesta de infraestructura para 14+ áreas de campus en zona remota: Cat 6, fibra OS2 ADSS, wireless Ubiquiti y backbone óptico. Q447,000+.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Tecnología</span>
+            <span class="project-meta-val">OS2 ADSS · Cat 6</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Cobertura</span>
+            <span class="project-meta-val">14 áreas campus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Estaciones de Pánico · Certificación</div>
+        <h3>Publigrafik / JCDecaux – Red Nacional</h3>
+        <p>10 estaciones de emergencia DS-KEP311X-ZJ con cámaras PTZ integradas y Cat 6A certificado. Gestión centralizada en HikCentral con reportes de certificación Fluke por punto.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Estaciones</span>
+            <span class="project-meta-val">10 unidades</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Cableado</span>
+            <span class="project-meta-val">Cat 6A certificado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Conectividad Remota · CCTV</div>
+        <h3>La Popular – Santa Bárbara, Baja Verapaz</h3>
+        <p>Instalación correctiva de Starlink Enterprise en zona sin cobertura de fibra, con videovigilancia integrada al sistema central en Ciudad de Guatemala.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Solución</span>
+            <span class="project-meta-val">Starlink Enterprise</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Ubicación</span>
+            <span class="project-meta-val">Baja Verapaz</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Infraestructura · Honduras</div>
+        <h3>Propuesta Regional – Honduras</h3>
+        <p>Sistema de pánico y control de acceso para cliente institucional en Honduras: HikCentral con ISV, terminales DS-KEP311X-ZJ y certificación de red. L2,650,000+.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">País</span>
+            <span class="project-meta-val">Honduras</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Valor</span>
+            <span class="project-meta-val">L 2.65M</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Cat 6A · Fibra · Escuintla</div>
+        <h3>Maquinas Exactas – Planta Escuintla</h3>
+        <p>Infraestructura de red Cat 6A y fibra óptica para planta industrial en Escuintla. Certificación completa entregada con reporte Fluke DSX-8000 por punto.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Estándar</span>
+            <span class="project-meta-val">TIA-568 / Cat 6A</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Ubicación</span>
+            <span class="project-meta-val">Escuintla</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIENTES ── -->
+<section id="clientes">
+  <div class="container">
+    <div class="orange-bar"></div>
+    <p class="section-label">Clientes</p>
+    <h2 class="section-title">Empresas que confían en RISEE</h2>
+
+    <div class="clients-row">
+      <div class="client-box">
+        <div class="client-name">Industria La Popular</div>
+        <div class="client-sector">Agroindustria · Control de acceso</div>
+      </div>
+      <div class="client-box">
+        <div class="client-name">NAISA</div>
+        <div class="client-sector">Agroindustria · Infraestructura IP</div>
+      </div>
+      <div class="client-box">
+        <div class="client-name">Publigrafik / JCDecaux</div>
+        <div class="client-sector">Publicidad exterior · Seguridad</div>
+      </div>
+      <div class="client-box">
+        <div class="client-name">Maquinas Exactas</div>
+        <div class="client-sector">Industrial · Redes</div>
+      </div>
+      <div class="client-box">
+        <div class="client-name">La Cadena</div>
+        <div class="client-sector">Retail · HikCentral Pro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="container">
+    <div class="orange-bar"></div>
+    <p class="section-label">Contacto</p>
+    <h2 class="section-title">¿Tiene un proyecto en mente?</h2>
+    <p class="section-sub">Cuéntenos su necesidad. Le respondemos en menos de 24 horas con una propuesta técnica.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Información de contacto</h3>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Dirección</div>
+            <div class="contact-item-val">6 Av. 9-85 Zona 9, Oficina 302 Nivel 3<br>Edificio Galerías Tivoli, Guatemala</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 5.55 5.55l1.64-1.64a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Teléfonos</div>
+            <div class="contact-item-val">+502 2361-5540<br>+502 5554-1758</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Correo</div>
+            <div class="contact-item-val">cx@risee.net</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Horario de atención</div>
+            <div class="contact-item-val">Lunes a viernes: 7:30 – 17:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Su nombre">
+            </div>
+            <div class="form-group">
+              <label>Empresa</label>
+              <input type="text" placeholder="Nombre de empresa">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="tel" placeholder="+502 0000-0000">
+            </div>
+            <div class="form-group">
+              <label>Correo</label>
+              <input type="email" placeholder="correo@empresa.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tipo de proyecto</label>
+            <select>
+              <option value="">Seleccionar servicio...</option>
+              <option>Control de Acceso / HikCentral</option>
+              <option>Videovigilancia CCTV</option>
+              <option>Cableado estructurado Cat 6A</option>
+              <option>Fibra óptica</option>
+              <option>Conectividad / Starlink</option>
+              <option>Estaciones de pánico</option>
+              <option>Mantenimiento / Soporte</option>
+              <option>Múltiples servicios</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Descripción del proyecto</label>
+            <textarea placeholder="Describa brevemente su proyecto, número de ubicaciones, cantidad de equipos aproximada y cualquier requerimiento especial..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <a href="#" class="footer-logo">RIS<span>EE</span></a>
+    <ul class="footer-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RISEE – Sistemas Digitales Tecnología IP. Guatemala.</span>
+    <span>cx@risee.net · +502 2361-5540</span>
+  </div>
+</footer>
+
+</body>
+</html>
