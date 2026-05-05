@@ -1959,30 +1959,33 @@
       </div>
 
       <div class="contact-form">
-        <form>
+        <form action="https://formspree.io/f/mrejkezb" method="POST">
+          <input type="hidden" name="_subject" value="Nueva solicitud desde risee.net">
+          <input type="hidden" name="_replyto" value="cx@risee.net">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="form-row">
             <div class="form-group">
               <label>Nombre</label>
-              <input type="text" placeholder="Su nombre">
+              <input type="text" name="nombre" placeholder="Su nombre">
             </div>
             <div class="form-group">
               <label>Empresa</label>
-              <input type="text" placeholder="Nombre de empresa">
+              <input type="text" name="empresa" placeholder="Nombre de empresa">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Teléfono</label>
-              <input type="tel" placeholder="+502 0000-0000">
+              <input type="tel" name="telefono" placeholder="+502 0000-0000">
             </div>
             <div class="form-group">
               <label>Correo</label>
-              <input type="email" placeholder="correo@empresa.com">
+              <input type="email" name="email" placeholder="correo@empresa.com">
             </div>
           </div>
           <div class="form-group">
             <label>Tipo de proyecto</label>
-            <select>
+            <select name="servicio">
               <option value="">Seleccionar servicio...</option>
               <option>Control de Acceso / HikCentral</option>
               <option>Videovigilancia CCTV</option>
@@ -1996,7 +1999,7 @@
           </div>
           <div class="form-group">
             <label>Descripción del proyecto</label>
-            <textarea placeholder="Describa brevemente su proyecto, número de ubicaciones, cantidad de equipos aproximada y cualquier requerimiento especial..."></textarea>
+            <textarea name="descripcion" placeholder="Describa brevemente su proyecto, número de ubicaciones, cantidad de equipos aproximada y cualquier requerimiento especial..."></textarea>
           </div>
           <button type="submit" class="form-submit">Enviar solicitud</button>
         </form>
