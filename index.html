@@ -22,6 +22,7 @@
   --hivis:#FF6A1A; --hivis-hi:#FF7E38; --hivis-dim:rgba(255,106,26,.12);
   --gold:#4CC2F5; --gold-hi:#7AD3FA; --gold-dim:rgba(76,194,245,.12); --gold-line:rgba(76,194,245,.34);
   --sky:#5AB0F0;
+  --rx:#E5372A; --rx-line:rgba(229,55,42,.38); --rx-dim:rgba(229,55,42,.12);
   --maxw:1200px;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
@@ -308,6 +309,17 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
   .hub-tag{max-width:none}
 }
 
+/* red extel */
+.supply.rx::before{background:var(--rx)}
+.supply.rx .badge-ic{color:var(--rx)}
+.supply.rx .ix{color:var(--rx)}
+.supply.rx .rx-name{color:var(--rx)}
+.rx-link{display:inline-flex;align-items:center;gap:.45em;margin-top:16px;font-family:'JetBrains Mono';font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rx);border:1px solid var(--rx-line);border-radius:2px;padding:.45em .75em;transition:.2s}
+.rx-link:hover{background:var(--rx-dim)}
+.svc .pw.rx{color:var(--rx);border-color:var(--rx-line)}
+.svc .pw.rx:hover{background:var(--rx-dim)}
+.foot .l .rxn{color:var(--rx)}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:.7s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -442,6 +454,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
         <div class="ix">// CCTV</div>
         <h3>Videovigilancia CCTV</h3>
         <p>Cámaras IP Dahua y Hikvision: AcuSense, domo PTZ, 4K y anticorrosión para entornos industriales. NVR local o nube híbrida.</p>
+        <a href="#redextel" class="pw rx">● Respaldado por Red Extel</a>
       </div>
       <div class="svc">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="15" width="20" height="6" rx="1"/><path d="M6 6h.01M6 18h.01"/></svg>
@@ -498,6 +511,22 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
           <span class="chip"><b>Servidores</b> · NVR / Storage</span>
           <span class="chip"><b>Exportación DDP</b> · GT · SV · HN</span>
         </div>
+      </div>
+    </div>
+    <div class="supply rx rv" id="redextel">
+      <div class="badge-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9M9 21V9M15 21V9M21 21V9"/><path d="M1.5 12h21M1.5 16.5h21"/><path d="M12 3l1.2 2.6M8.5 4.5l1.5 2M15.5 4.5L14 6.5"/></svg>
+      </div>
+      <div>
+        <div class="ix">// PERÍMETRO · Seguridad perimetral &amp; CCTV</div>
+        <h3>Con el respaldo de <span class="rx-name">Red Extel</span></h3>
+        <p>En seguridad perimetral y videovigilancia trabajamos junto a Red Extel, con más de 20 años protegiendo residencias, comercios e industria en Guatemala. Ellos aportan la experiencia en el perímetro; RISEE la integra con su red, su control de acceso y su monitoreo.</p>
+        <div class="chips">
+          <span class="chip"><b>Cercas eléctricas</b> · Perímetro</span>
+          <span class="chip"><b>CCTV</b> · Video IP</span>
+          <span class="chip"><b>+20 años</b> · En el mercado</span>
+        </div>
+        <a class="rx-link" href="https://redextel.net" target="_blank" rel="noopener">redextel.net ↗</a>
       </div>
     </div>
   </div>
@@ -721,7 +750,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 
 <footer>
   <div class="wrap foot">
-    <div class="l"><b>RISEE, S.A.</b> · Integradores de seguridad e infraestructura IP · <span class="grp">Una división de Starcloud Group</span> · © <span id="yr"></span></div>
+    <div class="l"><b>RISEE, S.A.</b> · Integradores de seguridad e infraestructura IP · <span class="grp">Una división de Starcloud Group</span> · Seguridad perimetral con <span class="rxn">Red Extel</span> · © <span id="yr"></span></div>
     <div class="r">Galerías Tívoli, Zona 9 — Guatemala<br>cx@risee.net · +502 5554-1758</div>
   </div>
 </footer>
