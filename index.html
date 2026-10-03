@@ -20,7 +20,7 @@
   --ice:#EAF0F6; --mist:#9AA7B5; --mute:#62707F;
   --signal:#34D8A0; --signal-dim:rgba(52,216,160,.12); --signal-line:rgba(52,216,160,.32);
   --hivis:#FF6A1A; --hivis-hi:#FF7E38; --hivis-dim:rgba(255,106,26,.12);
-  --gold:#D6A54A; --gold-hi:#E8BC66; --gold-dim:rgba(214,165,74,.12); --gold-line:rgba(214,165,74,.34);
+  --gold:#4CC2F5; --gold-hi:#7AD3FA; --gold-dim:rgba(76,194,245,.12); --gold-line:rgba(76,194,245,.34);
   --sky:#5AB0F0;
   --maxw:1200px;
   --ease:cubic-bezier(.22,.61,.36,1);
@@ -244,11 +244,11 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 /* ---------- starcloud ---------- */
 .brand .grp{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.6rem;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;border-left:1px solid var(--hairline);padding-left:.8em;margin-left:.1em;line-height:1.25}
 .brand .grp b{color:var(--gold);font-weight:500}
-.sc-block{background:radial-gradient(900px 420px at 50% 0%,rgba(214,165,74,.07),transparent 65%),var(--graphite-2);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)}
+.sc-block{background:radial-gradient(900px 420px at 50% 0%,rgba(76,194,245,.07),transparent 65%),var(--graphite-2);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)}
 .sc-block .eyebrow{color:var(--gold)}
 .sc-block .eyebrow::before{background:var(--gold-line)}
 .sc-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
-.sc-lockup{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--gold-line);border-radius:6px;background:rgba(214,165,74,.05)}
+.sc-lockup{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--gold-line);border-radius:6px;background:rgba(76,194,245,.05)}
 .sc-lockup svg{width:40px;height:40px;flex:0 0 auto}
 .sc-lockup .t{font-family:'Barlow Semi Condensed';font-weight:800;font-size:1.5rem;letter-spacing:.12em;line-height:1}
 .sc-lockup .s{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.14em;color:var(--mist);text-transform:uppercase;margin-top:.35rem}
@@ -282,7 +282,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 .sc-hub::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;transform:translateY(-1px);background:linear-gradient(90deg,var(--gold),var(--gold-line) 35%,var(--signal-line) 65%,var(--signal));z-index:0}
 .sc-hub::after{content:"";position:absolute;top:50%;left:0;width:40px;height:2px;transform:translateY(-1px);background:#fff;opacity:.8;box-shadow:0 0 10px #fff;animation:scflow 3.2s linear infinite;z-index:0}
 @keyframes scflow{0%{left:0;opacity:0}10%{opacity:.8}90%{opacity:.8}100%{left:calc(100% - 40px);opacity:0}}
-.hub-core{position:relative;z-index:1;width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--graphite);border:1px solid var(--hairline);box-shadow:0 0 0 6px var(--graphite-2),0 0 0 7px var(--hairline-soft),0 0 40px -6px rgba(214,165,74,.35)}
+.hub-core{position:relative;z-index:1;width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--graphite);border:1px solid var(--hairline);box-shadow:0 0 0 6px var(--graphite-2),0 0 0 7px var(--hairline-soft),0 0 40px -6px rgba(76,194,245,.35)}
 .hub-core b{font-family:'Barlow Semi Condensed';font-weight:800;text-transform:uppercase;font-size:1.05rem;line-height:1;letter-spacing:.04em}
 .hub-core small{font-family:'JetBrains Mono';font-size:.56rem;color:var(--mute);letter-spacing:.14em;text-transform:uppercase;margin-top:.35rem}
 .hub-tag{position:relative;z-index:1;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;color:var(--ice);background:var(--steel);border:1px solid var(--hairline);border-radius:3px;padding:.5em .7em;line-height:1.35;max-width:180px}
@@ -515,8 +515,8 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
       </div>
       <div class="sc-lockup" aria-label="Starcloud Group">
         <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M14 34h21a8 8 0 0 0 1.2-15.9A11 11 0 0 0 15.4 20 7 7 0 0 0 14 34z" stroke="#D6A54A" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M33 4l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L33 14.4l-4.2 2.6 1.1-4.8-3.7-3.2 4.9-.4z" fill="#5AB0F0"/>
+          <path d="M14 34h21a8 8 0 0 0 1.2-15.9A11 11 0 0 0 15.4 20 7 7 0 0 0 14 34z" stroke="#4CC2F5" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M33 4l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L33 14.4l-4.2 2.6 1.1-4.8-3.7-3.2 4.9-.4z" fill="#EAF0F6"/>
         </svg>
         <div><div class="t">STARCLOUD</div><div class="s">Group · Cloud &amp; DevOps</div></div>
       </div>
