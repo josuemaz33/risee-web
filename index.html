@@ -20,6 +20,8 @@
   --ice:#EAF0F6; --mist:#9AA7B5; --mute:#62707F;
   --signal:#34D8A0; --signal-dim:rgba(52,216,160,.12); --signal-line:rgba(52,216,160,.32);
   --hivis:#FF6A1A; --hivis-hi:#FF7E38; --hivis-dim:rgba(255,106,26,.12);
+  --gold:#D6A54A; --gold-hi:#E8BC66; --gold-dim:rgba(214,165,74,.12); --gold-line:rgba(214,165,74,.34);
+  --sky:#5AB0F0;
   --maxw:1200px;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
@@ -197,11 +199,6 @@ header.scrolled{
 .why h3{font-family:'Barlow Semi Condensed';font-weight:700;text-transform:uppercase;font-size:1.18rem;margin-bottom:.5rem;line-height:1.05}
 .why p{font-size:.9rem;color:var(--mist);font-weight:300;line-height:1.5}
 
-/* clientes */
-.clients{display:flex;flex-wrap:wrap;gap:14px}
-.client{flex:1 1 200px;background:var(--graphite-2);border:1px solid var(--hairline-soft);border-radius:4px;padding:22px 24px}
-.client .nm{font-family:'Barlow Semi Condensed';font-weight:700;text-transform:uppercase;font-size:1.3rem;letter-spacing:.02em}
-.client .sec{font-family:'JetBrains Mono';font-size:.66rem;color:var(--mute);text-transform:uppercase;letter-spacing:.1em;margin-top:.35rem}
 
 /* cobertura */
 .cover{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
@@ -243,6 +240,74 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 .foot .l b{color:var(--mist);font-weight:500}
 .foot .r{font-family:'JetBrains Mono';font-size:.72rem;color:var(--mute);letter-spacing:.06em;text-align:right;line-height:1.7}
 
+
+/* ---------- starcloud ---------- */
+.brand .grp{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.6rem;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;border-left:1px solid var(--hairline);padding-left:.8em;margin-left:.1em;line-height:1.25}
+.brand .grp b{color:var(--gold);font-weight:500}
+.sc-block{background:radial-gradient(900px 420px at 50% 0%,rgba(214,165,74,.07),transparent 65%),var(--graphite-2);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)}
+.sc-block .eyebrow{color:var(--gold)}
+.sc-block .eyebrow::before{background:var(--gold-line)}
+.sc-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.sc-lockup{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--gold-line);border-radius:6px;background:rgba(214,165,74,.05)}
+.sc-lockup svg{width:40px;height:40px;flex:0 0 auto}
+.sc-lockup .t{font-family:'Barlow Semi Condensed';font-weight:800;font-size:1.5rem;letter-spacing:.12em;line-height:1}
+.sc-lockup .s{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.14em;color:var(--mist);text-transform:uppercase;margin-top:.35rem}
+.sc-grid{display:grid;grid-template-columns:1fr 210px 1fr;gap:0;align-items:stretch;margin-top:54px}
+.sc-panel{background:var(--graphite);border:1px solid var(--hairline);border-radius:6px;padding:28px 26px 26px;position:relative;overflow:hidden}
+.sc-panel::before{content:"";position:absolute;left:0;right:0;top:0;height:3px}
+.sc-panel.cloud::before{background:var(--gold)}
+.sc-panel.field::before{background:var(--signal)}
+.sc-panel .ix{font-family:'JetBrains Mono';font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.sc-panel.cloud .ix{color:var(--gold)}
+.sc-panel.field .ix{color:var(--signal)}
+.sc-panel h3{font-family:'Barlow Semi Condensed';font-weight:800;text-transform:uppercase;font-size:1.7rem;line-height:1;margin:.5rem 0 .5rem;letter-spacing:.01em}
+.sc-panel>p{color:var(--mist);font-weight:300;font-size:.95rem;line-height:1.5;margin-bottom:20px}
+.sc-list{list-style:none;display:grid;gap:1px;background:var(--hairline-soft);border:1px solid var(--hairline-soft);border-radius:4px;overflow:hidden}
+.sc-list li{background:var(--graphite);padding:13px 14px;display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
+.sc-list svg{width:20px;height:20px;margin-top:2px;opacity:.9}
+.sc-panel.cloud .sc-list svg{color:var(--gold)}
+.sc-panel.field .sc-list svg{color:var(--signal)}
+.sc-list b{display:block;font-family:'Barlow Semi Condensed';font-weight:700;text-transform:uppercase;font-size:1.02rem;letter-spacing:.02em;line-height:1.15}
+.sc-list span{display:block;font-size:.86rem;color:var(--mist);font-weight:300;line-height:1.45;margin-top:.2rem}
+.sc-console{margin-top:16px;background:#080a0e;border:1px solid var(--hairline);border-radius:4px;padding:12px 14px;font-family:'JetBrains Mono';font-size:.72rem;line-height:1.75;color:var(--mist)}
+.sc-console .hd{display:flex;justify-content:space-between;color:var(--mute);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--hairline-soft);padding-bottom:6px;margin-bottom:6px}
+.sc-console .ok{color:var(--signal)}
+.sc-console .g{color:var(--gold)}
+.sc-console .ln{opacity:0;transform:translateX(-6px);transition:.4s var(--ease)}
+.sc-console.on .ln{opacity:1;transform:none}
+.sc-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.sc-chips span{font-family:'JetBrains Mono';font-size:.66rem;color:var(--mist);text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--hairline-soft);background:#0a0d12;padding:.38em .7em;border-radius:2px}
+/* hub */
+.sc-hub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px 14px}
+.sc-hub::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;transform:translateY(-1px);background:linear-gradient(90deg,var(--gold),var(--gold-line) 35%,var(--signal-line) 65%,var(--signal));z-index:0}
+.sc-hub::after{content:"";position:absolute;top:50%;left:0;width:40px;height:2px;transform:translateY(-1px);background:#fff;opacity:.8;box-shadow:0 0 10px #fff;animation:scflow 3.2s linear infinite;z-index:0}
+@keyframes scflow{0%{left:0;opacity:0}10%{opacity:.8}90%{opacity:.8}100%{left:calc(100% - 40px);opacity:0}}
+.hub-core{position:relative;z-index:1;width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--graphite);border:1px solid var(--hairline);box-shadow:0 0 0 6px var(--graphite-2),0 0 0 7px var(--hairline-soft),0 0 40px -6px rgba(214,165,74,.35)}
+.hub-core b{font-family:'Barlow Semi Condensed';font-weight:800;text-transform:uppercase;font-size:1.05rem;line-height:1;letter-spacing:.04em}
+.hub-core small{font-family:'JetBrains Mono';font-size:.56rem;color:var(--mute);letter-spacing:.14em;text-transform:uppercase;margin-top:.35rem}
+.hub-tag{position:relative;z-index:1;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;color:var(--ice);background:var(--steel);border:1px solid var(--hairline);border-radius:3px;padding:.5em .7em;line-height:1.35;max-width:180px}
+.sc-out{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline-soft);border:1px solid var(--hairline-soft);border-radius:6px;overflow:hidden}
+.sc-out>div{background:var(--graphite);padding:22px 22px 24px}
+.sc-out .k{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.sc-out h4{font-family:'Barlow Semi Condensed';font-weight:700;text-transform:uppercase;font-size:1.18rem;line-height:1.05;margin:.5rem 0 .45rem}
+.sc-out p{font-size:.88rem;color:var(--mist);font-weight:300;line-height:1.5}
+.svc .pw{display:inline-flex;align-items:center;gap:.45em;margin-top:14px;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-line);border-radius:2px;padding:.35em .6em;transition:.2s}
+.svc .pw:hover{background:var(--gold-dim)}
+.foot .l .grp{color:var(--gold)}
+@media(max-width:980px){
+  .sc-head{grid-template-columns:1fr;gap:24px}
+  .sc-grid{grid-template-columns:1fr;gap:0}
+  .sc-hub{flex-direction:row;flex-wrap:wrap;padding:26px 0}
+  .sc-hub::before{top:0;bottom:0;left:50%;right:auto;width:2px;height:auto;transform:translateX(-1px);background:linear-gradient(180deg,var(--gold),var(--gold-line) 35%,var(--signal-line) 65%,var(--signal))}
+  .sc-hub::after{display:none}
+  .sc-out{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .brand .grp{display:none}
+  .sc-panel{padding:24px 18px 20px}
+  .hub-tag{max-width:none}
+}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:.7s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -282,9 +347,10 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="brand"><span class="mark"></span>RISEE</a>
+    <a href="#top" class="brand"><span class="mark"></span>RISEE<span class="grp">A <b>Starcloud</b><br>Group company</span></a>
     <nav class="nav-links" id="navlinks">
       <a href="#servicios">Servicios</a>
+      <a href="#starcloud">Starcloud</a>
       <a href="#proceso">Proceso</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#nosotros">Nosotros</a>
@@ -406,12 +472,14 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
         <div class="ix">// CLOUD</div>
         <h3>Infraestructura en la Nube</h3>
         <p>Arquitectura cloud y networking en AWS y Azure: VPC, balanceadores, VPN site-to-site y nube híbrida conectada a su red local.</p>
+        <a href="#starcloud" class="pw">★ Powered by Starcloud</a>
       </div>
       <div class="svc">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
         <div class="ix">// OPS</div>
         <h3>DevOps &amp; Automatización</h3>
-        <p>Contenedores Docker, CI/CD, monitoreo y servidores Linux. Despliegue y mantenimiento de aplicaciones e integraciones a medida.</p>
+        <p>Sistemas automatizados a medida: integraciones entre acceso, video y RRHH vía API, contenedores Docker, CI/CD y monitoreo sobre servidores Linux.</p>
+        <a href="#starcloud" class="pw">★ Powered by Starcloud</a>
       </div>
     </div>
 
@@ -435,11 +503,81 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
   </div>
 </section>
 
+
+<!-- STARCLOUD -->
+<section class="block sc-block" id="starcloud">
+  <div class="wrap">
+    <div class="sc-head rv">
+      <div>
+        <span class="eyebrow">02 · Starcloud Group</span>
+        <h2 class="disp section-h">Red en campo. Automatización en la nube.</h2>
+        <p class="lead" style="margin-top:1.1rem">RISEE es la división de infraestructura de Starcloud Group. Nosotros tendemos la fibra y levantamos los enlaces; Starcloud pone la capa DevOps que los monitorea y automatiza los sistemas que corren encima.</p>
+      </div>
+      <div class="sc-lockup" aria-label="Starcloud Group">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M14 34h21a8 8 0 0 0 1.2-15.9A11 11 0 0 0 15.4 20 7 7 0 0 0 14 34z" stroke="#D6A54A" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M33 4l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L33 14.4l-4.2 2.6 1.1-4.8-3.7-3.2 4.9-.4z" fill="#5AB0F0"/>
+        </svg>
+        <div><div class="t">STARCLOUD</div><div class="s">Group · Cloud &amp; DevOps</div></div>
+      </div>
+    </div>
+
+    <div class="sc-grid rv">
+      <div class="sc-panel cloud">
+        <div class="ix">// Starcloud · Plataforma</div>
+        <h3>DevOps &amp; sistemas automatizados</h3>
+        <p>Software y operación continua sobre la infraestructura que instalamos.</p>
+        <ul class="sc-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg><div><b>Automatización de procesos</b><span>Middleware e integraciones vía API entre control de acceso, video, RRHH y nómina.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/><path d="M7 7h.01M7 17h.01"/></svg><div><b>Contenedores y CI/CD</b><span>Docker, pipelines de despliegue y servidores Linux administrados.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><div><b>Monitoreo de red</b><span>Visibilidad de enlaces, switches y equipos con alertas tempranas.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg><div><b>Infraestructura cloud</b><span>Azure y AWS, nube híbrida y VPN site-to-site hacia sus sedes.</span></div></li>
+        </ul>
+        <div class="sc-console" id="scConsole" aria-hidden="true">
+          <div class="hd"><span>pipeline · sistema-acceso</span><span class="g">● live</span></div>
+          <div class="ln">$ git push origin main</div>
+          <div class="ln"><span class="ok">✓</span> build · contenedor generado</div>
+          <div class="ln"><span class="ok">✓</span> tests · integración API</div>
+          <div class="ln"><span class="ok">✓</span> deploy · producción</div>
+          <div class="ln"><span class="g">→</span> monitoreo activo</div>
+        </div>
+      </div>
+
+      <div class="sc-hub" aria-hidden="true">
+        <div class="hub-tag">Red de campo monitoreada desde la nube</div>
+        <div class="hub-core"><b>Integra&shy;ción</b><small>Synergy</small></div>
+        <div class="hub-tag">VPN site-to-site entre sedes y cloud</div>
+      </div>
+
+      <div class="sc-panel field">
+        <div class="ix">// RISEE · Infraestructura</div>
+        <h3>Fibra óptica &amp; enlaces inalámbricos</h3>
+        <p>El transporte físico que conecta plantas, bodegas y sitios remotos.</p>
+        <ul class="sc-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c4-6 8 6 12 0s6-2 8 0"/><path d="M2 17c4-6 8 6 12 0s6-2 8 0" opacity=".5"/></svg><div><b>Fibra óptica OM4 / OS2</b><span>Tendido, fusión, ODF y certificación de enlaces entre edificios y sedes.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20l3-14 3 14M6.2 14h3.6"/><path d="M15 20l3-14 3 14M16.2 14h3.6"/><path d="M9 6c2-2 4-2 6 0"/></svg><div><b>Enlaces punto a punto</b><span>Radioenlaces Ubiquiti, Mikrotik y Huawei para unir sitios sin fibra.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M6.3 17.7l2.8-2.8M14.9 9.1l2.8-2.8"/></svg><div><b>Punto multipunto</b><span>Cobertura inalámbrica para cámaras, garitas y equipos en campo abierto.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a8 8 0 0 1 16 0"/><path d="M12 10v10M8 20h8"/><circle cx="12" cy="10" r="1.5"/></svg><div><b>Conectividad remota</b><span>Starlink para sitios aislados, integrado a la red corporativa.</span></div></li>
+        </ul>
+        <div class="sc-chips">
+          <span>Fluke DSX-8000</span><span>TIA-568</span><span>Ubiquiti</span><span>Mikrotik</span><span>Huawei</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-out rv">
+      <div><div class="k">// 01</div><h4>Un solo responsable</h4><p>Del cable al software: la misma organización diseña la red, la instala y opera lo que corre encima.</p></div>
+      <div><div class="k">// 02</div><h4>Sistemas que se operan solos</h4><p>Procesos automatizados que reducen trabajo manual y dependencia de personas clave.</p></div>
+      <div><div class="k">// 03</div><h4>Fallas detectadas antes</h4><p>Enlaces y equipos monitoreados para actuar antes de que el problema llegue a la operación.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- PROCESO -->
 <section class="block" id="proceso" style="background:var(--graphite-2);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)">
   <div class="wrap">
     <div class="block-head rv">
-      <span class="eyebrow">02 · Método de obra</span>
+      <span class="eyebrow">03 · Método de obra</span>
       <h2 class="disp section-h">Un método de obra, no improvisación.</h2>
     </div>
     <div class="pipe rv">
@@ -455,7 +593,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 <section class="block" id="proyectos">
   <div class="wrap">
     <div class="block-head rv">
-      <span class="eyebrow">03 · Experiencia en campo</span>
+      <span class="eyebrow">04 · Experiencia en campo</span>
       <h2 class="disp section-h">Experiencia comprobada en campo.</h2>
       <p class="lead">Proyectos industriales reales: complejidad técnica, trabajo fuera de la capital y entrega a tiempo.</p>
     </div>
@@ -508,7 +646,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 <section class="block" id="nosotros" style="background:var(--graphite-2);border-top:1px solid var(--hairline-soft)">
   <div class="wrap">
     <div class="block-head rv">
-      <span class="eyebrow">04 · Por qué RISEE</span>
+      <span class="eyebrow">05 · Por qué RISEE</span>
       <h2 class="disp section-h">Más que instaladores. Integradores de sistemas.</h2>
     </div>
     <div class="why-grid rv">
@@ -518,22 +656,6 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
       <div class="why"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PASS</div><h3>Documentación técnica entregable</h3><p>Planos de red, inventario, credenciales, informes de certificación y manuales. El cliente recibe el activo completo.</p></div>
       <div class="why"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PASS</div><h3>Proyectos en campo, sin excusas</h3><p>Ejecutados en Escuintla, Baja Verapaz, Petén, El Salvador y Honduras. Capacidad logística para obra fuera de la capital y regional.</p></div>
       <div class="why"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>PASS</div><h3>Contratos de mantenimiento con SLA</h3><p>Contratos anuales preventivos y correctivos con tiempos de respuesta definidos. Su inversión sigue funcionando año tras año.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIENTES -->
-<section class="block" id="clientes">
-  <div class="wrap">
-    <div class="block-head rv">
-      <span class="eyebrow">05 · Confianza</span>
-      <h2 class="disp section-h">Empresas que confían en RISEE.</h2>
-    </div>
-    <div class="clients rv">
-      <div class="client"><div class="nm">Industria La Popular</div><div class="sec">Agroindustria</div></div>
-      <div class="client"><div class="nm">NAISA</div><div class="sec">Infraestructura IP</div></div>
-      <div class="client"><div class="nm">Publigrafik / JCDecaux</div><div class="sec">Mobiliario urbano</div></div>
-      <div class="client"><div class="nm">Máquinas Exactas</div><div class="sec">Manufactura</div></div>
     </div>
   </div>
 </section>
@@ -599,7 +721,7 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
 
 <footer>
   <div class="wrap foot">
-    <div class="l"><b>RISEE, S.A.</b> · Integradores de seguridad e infraestructura IP · © <span id="yr"></span></div>
+    <div class="l"><b>RISEE, S.A.</b> · Integradores de seguridad e infraestructura IP · <span class="grp">Una división de Starcloud Group</span> · © <span id="yr"></span></div>
     <div class="r">Galerías Tívoli, Zona 9 — Guatemala<br>cx@risee.net · +502 5554-1758</div>
   </div>
 </footer>
@@ -625,6 +747,17 @@ footer{border-top:1px solid var(--hairline-soft);padding:38px 0;background:var(-
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
     rv.forEach(function(el){io.observe(el);});
   } else { rv.forEach(function(el){el.classList.add('in');}); }
+
+  // starcloud console
+  var scc=document.getElementById('scConsole');
+  if(scc){
+    var lns=scc.querySelectorAll('.ln');
+    lns.forEach(function(l,i){ l.style.transitionDelay=(reduce?0:i*0.45)+'s'; });
+    if('IntersectionObserver' in window && !reduce){
+      var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scc.classList.add('on');cio.disconnect();}});},{threshold:.4});
+      cio.observe(scc);
+    } else { scc.classList.add('on'); }
+  }
 
   // count-up stats
   function animateCount(el){
